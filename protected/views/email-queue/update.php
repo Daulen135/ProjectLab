@@ -1,0 +1,31 @@
+<?php
+
+/* @var $this yii\web\View */
+/* @var $model app\models\EmailQueue */
+$this->params['breadcrumbs'][] = [
+    'label' => Yii::t('app', 'Email Queues'),
+    'url' => [
+        'index'
+    ]
+];
+$this->params['breadcrumbs'][] = [
+    'label' => $model->id,
+    'url' => [
+        'view',
+        'id' => $model->id
+    ]
+];
+$this->params['breadcrumbs'][] = Yii::t('app', 'Update');
+$title = Yii::t('app', 'Email Queues');
+?>
+<div class="wrapper">
+	<div class="card">
+		<div class="email-queue-update">
+			<?=  \app\components\PageHeader::widget(['title' => $title]); ?>
+		</div>
+	</div>
+	<div class="card">
+		<?= $this->render ( '_form', [ 'model' => $model ] )?>
+	</div>
+</div>
+
